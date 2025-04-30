@@ -5,6 +5,12 @@
 #include <assert.h>
 #include <stdbool.h>
 
+#define ITERATE_BITMAP_BEGIN(btimapPtr, startIndex, index, boolout) \ 
+	// do some stuff here
+
+#define ITERATE_BITMAP_END \ 
+	// do some stuff here
+
 typedef enum {
 	ZERO,
 	ONE,
