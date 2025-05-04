@@ -33,4 +33,6 @@ void bitmap_set_bit_at(bitmap_t *bitmap, uint16_t index) ;
 void bitmap_unset_bit_at(bitmap_t *bitmap, uint16_t index) ;
 char *bitmap_print(bitmap_t *bitmap); 
 
+uint32_t bits_generate_ones(uint8_t start_offset, uint8_t end_offset);
+bool bits_compare(uint32_t bits1, uint32_t bits2, uint8_t count);
 #endif
