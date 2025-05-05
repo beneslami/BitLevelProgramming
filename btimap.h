@@ -35,4 +35,22 @@ char *bitmap_print(bitmap_t *bitmap);
 
 uint32_t bits_generate_ones(uint8_t start_offset, uint8_t end_offset);
 bool bits_compare(uint32_t bits1, uint32_t bits2, uint8_t count);
+
+static inline uint32_t
+LSHIFT (uint32_t N, uint16_t n) {
+	/* Fn returns 0 if n == 32 else return a new uint32_t after performing left shift by n */
+	if(n == 32) {
+		return (uint32_t)0;
+	}
+	return N << n;
+}
+
+static inline uint32_t
+RSHIFT (uint32_t N, uint16_t n) {
+	/* Fn returns 0 if n == 32 else return a new uint32_t after performing right shift by n */
+	if(n == 32) {
+		return (uint32_t)0;
+	}
+	return N >> n;
+}
 #endif
